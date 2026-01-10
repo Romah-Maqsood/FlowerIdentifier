@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/purple_500" />
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/lavender_light" />
+    <item
+        android:width="120dp"
+        android:height="120dp"
+        android:drawable="@mipmap/ic_launcher"
+        android:gravity="center" />
+</layer-list>

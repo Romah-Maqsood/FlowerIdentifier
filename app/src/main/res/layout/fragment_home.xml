@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender_light"
+    android:background="?android:attr/colorBackground"
     tools:context=".ui.home.HomeFragment">
 
     <com.google.android.material.card.MaterialCardView
@@ -15,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Camera"
+                android:textColor="?attr/colorOnSurface"
                 app:icon="@drawable/ic_camera"
+                app:iconTint="?attr/colorOnSurface"
                 app:layout_constraintEnd_toStartOf="@+id/btnGallery"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imagePreview" />
@@ -55,7 +58,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="Gallery"
+                android:textColor="?attr/colorOnSurface"
                 app:icon="@drawable/ic_gallery"
+                app:iconTint="?attr/colorOnSurface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnCamera"
                 app:layout_constraintTop_toBottomOf="@id/imagePreview" />
@@ -84,6 +89,7 @@
         android:layout_marginEnd="16dp"
         android:visibility="gone"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
@@ -100,7 +106,7 @@
                 android:text="Result will appear here"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -113,7 +119,7 @@
                 android:text="Confidence: 0%"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvResult" />
@@ -137,6 +143,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Short description of the flower will appear here."
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="?attr/colorOnSurface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/progressBar" />

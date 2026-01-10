@@ -29,11 +29,11 @@ public class LibraryFragment extends Fragment implements FlowerAdapter.OnItemCli
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         List<Flower> flowerList = new ArrayList<>();
-        flowerList.add(new Flower("Rose", "Rosa", "A woody perennial flowering plant.", R.drawable.ic_flower_rose));
-        flowerList.add(new Flower("Daisy", "Bellis perennis", "A common European composite flower.", R.drawable.ic_flower_daisy));
-        flowerList.add(new Flower("Dandelion", "Taraxacum", "A widely distributed weed.", R.drawable.ic_flower_dandelion));
-        flowerList.add(new Flower("Tulip", "Tulipa", "A bulbous spring-flowering plant.", R.drawable.ic_flower_tulip));
-        flowerList.add(new Flower("Sunflower", "Helianthus", "A tall North American plant.", R.drawable.ic_flower_sunflower));
+        flowerList.add(new Flower("Rose", "Rosa", "A woody perennial flowering plant.", R.drawable.flower_rose));
+        flowerList.add(new Flower("Daisy", "Bellis perennis", "A common European composite flower.", R.drawable.flower_daisy));
+        flowerList.add(new Flower("Dandelion", "Taraxacum", "A widely distributed weed.", R.drawable.flower_dandelion));
+        flowerList.add(new Flower("Tulip", "Tulipa", "A bulbous spring-flowering plant.", R.drawable.flower_tulip));
+        flowerList.add(new Flower("Sunflower", "Helianthus", "A tall North American plant.", R.drawable.flower_sunflower));
 
         FlowerAdapter adapter = new FlowerAdapter(flowerList, this);
         recyclerView.setAdapter(adapter);

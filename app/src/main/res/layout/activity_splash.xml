@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/spring_green_light">
+    android:background="@color/lavender_light">
 
     <ImageView
         android:layout_width="100dp"
@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
         android:text="Flower Identifier"
-        android:textColor="@color/spring_green_dark"
+        android:textColor="@color/lavender_dark"
         android:textSize="24sp" />
 
 </RelativeLayout>

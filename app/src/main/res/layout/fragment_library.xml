@@ -4,6 +4,7 @@
     android:id="@+id/recycler_view_library"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender_light"
+    android:background="@color/dark_background"
     android:padding="8dp"
+    android:theme="@style/Theme.FlowerIdentifier.Dark"
     tools:context=".ui.library.LibraryFragment" />

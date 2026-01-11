@@ -2,31 +2,22 @@
     <!-- Base application theme. -->
     <style name="Theme.FlowerIdentifier" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/lavender_deep</item>
-        <item name="colorPrimaryVariant">@color/lavender_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorPrimaryVariant">@color/purple_dark</item>
+        <item name="colorOnPrimary">@color/text_on_dark_background</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/accent_pink</item>
-        <item name="colorSecondaryVariant">@color/accent_pink</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondary">@color/purple_accent</item>
+        <item name="colorSecondaryVariant">@color/purple_accent</item>
+        <item name="colorOnSecondary">@color/text_on_dark_background</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/purple_background</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/purple_background</item>
     </style>
 
-    <style name="Theme.FlowerIdentifier.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:colorBackground">@color/dark_background</item>
-        <item name="colorOnSurface">@color/dark_text</item>
-        <item name="colorPrimary">@color/dark_accent</item>
-    </style>
-
-    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
-        <item name="android:statusBarColor">@color/lavender_light</item>
+        <item name="android:statusBarColor">@color/purple_background</item>
     </style>
 
-    <style name="RoundedCorner">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
-    </style>
 </resources>

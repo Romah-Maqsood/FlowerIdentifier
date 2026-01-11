@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Main Theme Colors -->
-    <color name="lavender_light">#F5F0FF</color>
-    <color name="lavender_mid">#E6DFFF</color>
-    <color name="lavender_deep">#673AB7</color>
-    <color name="lavender_dark">#482880</color>
-
-    <!-- Accent Colors -->
-    <color name="accent_pink">#E91E63</color>
-    <color name="accent_yellow">#FFC107</color>
-    <color name="accent_red">#F44336</color>
+    <!-- New Purple Theme -->
+    <color name="purple_background">#EBD3F8</color>
+    <color name="purple_accent">#AD49E1</color>
+    <color name="purple_primary">#7A1CAC</color>
+    <color name="purple_dark">#2E073F</color>
 
     <!-- Text Colors -->
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
-
-    <!-- Dark Theme Colors -->
-    <color name="dark_background">#212121</color>
-    <color name="dark_card">#333333</color>
-    <color name="dark_text">#FFFFFF</color>
-    <color name="dark_accent">#BB86FC</color>
+    <color name="text_on_light_background">#2E073F</color>
+    <color name="text_on_dark_background">#FFFFFF</color>
 
     <!-- Base Colors -->
     <color name="white">#FFFFFFFF</color>

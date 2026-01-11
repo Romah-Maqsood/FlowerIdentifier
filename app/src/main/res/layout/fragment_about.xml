@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender_light"
+    android:background="@color/purple_background"
     tools:context=".ui.about.AboutFragment">
 
     <LinearLayout
@@ -16,6 +16,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="16dp">
 
             <LinearLayout
@@ -24,45 +25,93 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
+                <!-- App Overview -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="About This App"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:textColor="@color/text_primary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="This application uses a sophisticated AI model to identify flowers from your camera or gallery. It is designed to be a simple, user-friendly tool for flower enthusiasts and students."
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                    android:textColor="@color/text_secondary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="Supported Flowers"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="App Overview"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/purple_dark"
+                    app:drawableStartCompat="@drawable/ic_info_outline" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="- Rose\n- Daisy\n- Dandelion\n- Tulip\n- Sunflower"
+                    android:text="Flower Identifier is a smart and easy-to-use mobile application that helps users identify flowers instantly using artificial intelligence. Simply capture a photo or select one from your gallery, and the app predicts the flower type with high accuracy."
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/purple_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="24dp"
+                    android:background="@color/purple_accent" />
+
+                <!-- How It Works -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="How It Works"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/purple_dark"
+                    app:drawableStartCompat="@drawable/ic_settings_ethernet" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="Version 1.0"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="- Uses a trained AI image classification model\n- Analyzes flower images from camera or gallery\n- Predicts the most likely flower category\n- Displays results with confidence and details"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/purple_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="24dp"
+                    android:background="@color/purple_accent" />
+
+                <!-- Supported Flowers -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Supported Flowers"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/purple_dark"
+                    app:drawableStartCompat="@drawable/ic_local_florist" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="- Rose\n- Daisy\n- Sunflower\n- Tulip\n- Dandelion"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/purple_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="24dp"
+                    android:background="@color/purple_accent" />
+
+                <!-- App Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Version: 1.0\nCategory: Education / AI\nSnap a bloom, know it soon."
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/purple_primary" />
+
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

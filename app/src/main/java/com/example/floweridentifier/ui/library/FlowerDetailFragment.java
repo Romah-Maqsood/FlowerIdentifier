@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.floweridentifier.R;
 
@@ -19,6 +21,9 @@ public class FlowerDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_flower_detail, container, false);
+
+        Toolbar toolbar = root.findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(v -> NavHostFragment.findNavController(this).navigateUp());
 
         ImageView flowerImage = root.findViewById(R.id.flower_detail_image);
         TextView flowerName = root.findViewById(R.id.flower_detail_name);

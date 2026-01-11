@@ -1,7 +1,9 @@
 package com.example.floweridentifier.ui.home;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -25,15 +27,22 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.floweridentifier.R;
+import com.example.floweridentifier.data.Prediction;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.support.common.FileUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import static android.app.Activity.RESULT_OK;
@@ -226,6 +235,7 @@ public class HomeFragment extends Fragment {
             if (maxIndex != -1 && maxConfidence >= CONFIDENCE_THRESHOLD) {
                 flowerName = labelList.get(maxIndex).trim();
                 confidence = maxConfidence;
+                savePrediction(flowerName);
             } else {
                 flowerName = "No flower detected";
                 confidence = maxConfidence;
@@ -245,6 +255,40 @@ public class HomeFragment extends Fragment {
                 progressBar.setProgress(confidencePercent);
             });
         }).start();
+    }
+
+    private void savePrediction(String flowerName) {
+        SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("prediction_history", Context.MODE_PRIVATE);
+        String json = sharedPreferences.getString("history", "[]");
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<Prediction>>() {}.getType();
+        ArrayList<Prediction> history = gson.fromJson(json, type);
+
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        int imageResourceId = getResourceIdForFlower(flowerName);
+
+        history.add(0, new Prediction(flowerName, date, imageResourceId)); // Add to the top of the list
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("history", gson.toJson(history));
+        editor.apply();
+    }
+
+    private int getResourceIdForFlower(String flowerName) {
+        switch (flowerName) {
+            case "Rose":
+                return R.drawable.flower_rose;
+            case "Daisy":
+                return R.drawable.flower_daisy;
+            case "Dandelion":
+                return R.drawable.flower_dandelion;
+            case "Tulip":
+                return R.drawable.flower_tulip;
+            case "Sunflower":
+                return R.drawable.flower_sunflower;
+            default:
+                return R.drawable.ic_gallery; // A default placeholder
+        }
     }
 
     private float[][][][] preprocessBitmap(Bitmap bitmap) {

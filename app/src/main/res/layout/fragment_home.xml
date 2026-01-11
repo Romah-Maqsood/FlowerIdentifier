@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground"
+    android:background="@color/purple_background"
     tools:context=".ui.home.HomeFragment">
 
     <com.google.android.material.card.MaterialCardView
@@ -12,13 +12,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,8 +29,8 @@
             <ImageView
                 android:id="@+id/imagePreview"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:background="@color/lavender_mid"
+                android:layout_height="300dp"
+                android:background="@color/purple_accent"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -43,9 +44,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="Camera"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/purple_dark"
                 app:icon="@drawable/ic_camera"
-                app:iconTint="?attr/colorOnSurface"
+                app:iconTint="@color/purple_dark"
                 app:layout_constraintEnd_toStartOf="@+id/btnGallery"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imagePreview" />
@@ -58,9 +59,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="Gallery"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/purple_dark"
                 app:icon="@drawable/ic_gallery"
-                app:iconTint="?attr/colorOnSurface"
+                app:iconTint="@color/purple_dark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnCamera"
                 app:layout_constraintTop_toBottomOf="@id/imagePreview" />
@@ -72,6 +73,7 @@
                 android:layout_marginTop="8dp"
                 android:enabled="false"
                 android:text="Predict Flower"
+                app:backgroundTint="@color/purple_accent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
@@ -88,6 +90,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +109,7 @@
                 android:text="Result will appear here"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/purple_dark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +122,7 @@
                 android:text="Confidence: 0%"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/purple_primary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvResult" />
@@ -132,6 +135,7 @@
                 android:layout_marginTop="8dp"
                 android:max="100"
                 android:progress="0"
+                android:progressTint="@color/purple_accent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvConfidence" />
@@ -143,7 +147,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Short description of the flower will appear here."
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/purple_primary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/progressBar" />
